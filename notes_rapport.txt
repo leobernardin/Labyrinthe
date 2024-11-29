@@ -1,0 +1,1 @@
+- On a crée un pointeur vers la case de sortie dans le constructeur du labyrinthe pour qu'elle soit initialisée dès le début et pouvoir manipuler ses coordonnées facilement et ainsi déterminer quand la partie est terminée (quand le psersonnage est sur la case de sortie). 

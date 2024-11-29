@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="couloir.cpp" />
 		<Unit filename="couloir.hpp" />
+		<Unit filename="ennemi.cpp" />
+		<Unit filename="ennemi.hpp" />
 		<Unit filename="labyrinthe.cpp" />
 		<Unit filename="labyrinthe.hpp" />
 		<Unit filename="main.cpp" />
