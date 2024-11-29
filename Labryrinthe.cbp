@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Labryrinthe" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Labryrinthe" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Labryrinthe" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="couloir.cpp" />
+		<Unit filename="couloir.hpp" />
+		<Unit filename="labyrinthe.cpp" />
+		<Unit filename="labyrinthe.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mur.cpp" />
+		<Unit filename="mur.hpp" />
+		<Unit filename="objetgraphique.cpp" />
+		<Unit filename="objetgraphique.hpp" />
+		<Unit filename="objetgraphiquefixe.cpp" />
+		<Unit filename="objetgraphiquefixe.hpp" />
+		<Unit filename="objetgraphiquemobile.cpp" />
+		<Unit filename="objetgraphiquemobile.hpp" />
+		<Unit filename="personnage.cpp" />
+		<Unit filename="personnage.hpp" />
+		<Unit filename="plateau.cpp" />
+		<Unit filename="plateau.hpp" />
+		<Unit filename="sortie.cpp" />
+		<Unit filename="sortie.hpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
