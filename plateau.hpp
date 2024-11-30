@@ -27,7 +27,10 @@ class Plateau {
         void setCase(int i, int j, ObjetGraphiqueFixe* o);
         ObjetGraphiqueFixe* getCase(int i, int j) const;
         void afficher() const;
-        void afficher(ObjetGraphiqueMobile& p,ObjetGraphiqueMobile& e) const;
+        void afficher(ObjetGraphiqueMobile& p, ObjetGraphiqueMobile& e) const;
+
+        //surcharge de l'operateur "==" dans Plateau
+        bool operator==(const Plateau& other) const;
 };
 
 
