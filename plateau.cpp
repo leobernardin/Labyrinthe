@@ -45,13 +45,10 @@ Plateau :: Plateau(int l, int c){
     }
 
     setCase(m_nbl-1,7, new Sortie(m_nbl-1,7));
-
-<<<<<<< Updated upstream
-=======
 }
 
 // Constructeur par défaut
->>>>>>> Stashed changes
+
 
 Plateau::Plateau(){
 	m_nbl = 2;
@@ -67,8 +64,6 @@ Plateau::Plateau(){
     	}
 	}
 }
-<<<<<<< Updated upstream
-=======
 
 
 
@@ -100,7 +95,7 @@ Plateau :: ~Plateau(){
 
 }
 
->>>>>>> Stashed changes
+
 
 void Plateau :: setCase(int i, int j, ObjetGraphiqueFixe* o){
     m_plateau[i][j] = o;

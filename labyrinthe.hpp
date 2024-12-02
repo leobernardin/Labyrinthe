@@ -23,17 +23,15 @@ class Labyrinthe{
     public :
 
         // constructeur :
-<<<<<<< Updated upstream
         Labyrinthe(int l,int c);
-        //Labyrinthe(const labyrinthe&l);
-        //Labyrinthe(int l, int c); //Constructeur paramétré
+        Labyrinthe(const labyrinthe&l);
+        Labyrinthe(int l, int c); //Constructeur paramétré
         //~Labyrinthe(); //Destructeur
-=======
+
         Labyrinthe(int l, int c);
         Labyrinthe(const labyrinthe&l);
         Labyrinthe(); //Constructeur pour lire fichiers
         ~Labyrinthe(); //Destructeur
->>>>>>> Stashed changes
 
         // methodes :
         void afficher() const;
