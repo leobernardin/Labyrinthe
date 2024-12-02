@@ -117,11 +117,12 @@ void Plateau :: afficher(ObjetGraphiqueMobile&p,ObjetGraphiqueMobile&e ) const{
     int c1 = e.getJ();
         for(int i = 0; i<m_nbl; i++){
             for(int j=0; j<m_nbc; j++){
-                if(i == l && c==j && p.getType() == 4){
-                    p.afficher();
-                    }
-                else if(i == l1 && c1==j && e.getType() == 5){
+            	
+            	if(i == l1 && c1==j && e.getType() == 5){
                     e.afficher();
+                    }
+                else if(i == l && c==j && p.getType() == 4){
+                    p.afficher();
                     }
                 else{
                     getCase(i,j)->afficher();
