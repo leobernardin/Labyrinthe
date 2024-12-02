@@ -19,10 +19,10 @@ class Plateau {
         ObjetGraphiqueFixe ***m_plateau;
 
     public :
-        //Plateau();                     // Constructeur par défaut
-        //Plateau(const Plateau& p);     // Constructeur de copie
+        Plateau();                     // Constructeur par défaut
+        Plateau(const Plateau& p);     // Constructeur de copie
         Plateau(int l , int c);          // Constructeur paramétré
-        //~Plateau();                    // Destructeur
+        ~Plateau();                    // Destructeur
 
         void setCase(int i, int j, ObjetGraphiqueFixe* o);
         ObjetGraphiqueFixe* getCase(int i, int j) const;
