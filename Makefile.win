@@ -1,0 +1,58 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = couloir.o ennemi.o labyrinthe.o main.o mur.o objetgraphique.o objetgraphiquefixe.o objetgraphiquemobile.o personnage.o plateau.o sortie.o
+LINKOBJ  = couloir.o ennemi.o labyrinthe.o main.o mur.o objetgraphique.o objetgraphiquefixe.o objetgraphiquemobile.o personnage.o plateau.o sortie.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project_avecennemi.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+couloir.o: couloir.cpp
+	$(CPP) -c couloir.cpp -o couloir.o $(CXXFLAGS)
+
+ennemi.o: ennemi.cpp
+	$(CPP) -c ennemi.cpp -o ennemi.o $(CXXFLAGS)
+
+labyrinthe.o: labyrinthe.cpp
+	$(CPP) -c labyrinthe.cpp -o labyrinthe.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+mur.o: mur.cpp
+	$(CPP) -c mur.cpp -o mur.o $(CXXFLAGS)
+
+objetgraphique.o: objetgraphique.cpp
+	$(CPP) -c objetgraphique.cpp -o objetgraphique.o $(CXXFLAGS)
+
+objetgraphiquefixe.o: objetgraphiquefixe.cpp
+	$(CPP) -c objetgraphiquefixe.cpp -o objetgraphiquefixe.o $(CXXFLAGS)
+
+objetgraphiquemobile.o: objetgraphiquemobile.cpp
+	$(CPP) -c objetgraphiquemobile.cpp -o objetgraphiquemobile.o $(CXXFLAGS)
+
+personnage.o: personnage.cpp
+	$(CPP) -c personnage.cpp -o personnage.o $(CXXFLAGS)
+
+plateau.o: plateau.cpp
+	$(CPP) -c plateau.cpp -o plateau.o $(CXXFLAGS)
+
+sortie.o: sortie.cpp
+	$(CPP) -c sortie.cpp -o sortie.o $(CXXFLAGS)

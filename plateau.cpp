@@ -69,16 +69,16 @@ Plateau::Plateau(){
 
 // Constructeur de copie a creer
 Plateau :: Plateau(const Plateau& p){
-	p.m_nbl = m_nbl;
-	p.m_nbc = m_nbc;
-    p.m_plateau = new ObjetGraphiqueFixe**[m_nbl];
+	m_nbl = p.m_nbl;
+	m_nbc = p.m_nbc;
+    m_plateau = new ObjetGraphiqueFixe**[m_nbl];
     
     for (int i =0; i<m_nbl; i++){
-        p.m_plateau[i] = new ObjetGraphiqueFixe*[m_nbc];
+        m_plateau[i] = new ObjetGraphiqueFixe*[m_nbc];
     }
     for(int i = 0; i<m_nbl; i++){
         for(int j=0; j<m_nbc; j++){
-        	p.m_plateau[i][j] = m_plateau[i][j];
+        	m_plateau[i][j] = p.m_plateau[i][j];
     	}
 	}
 }
@@ -120,7 +120,7 @@ void Plateau :: afficher(ObjetGraphiqueMobile&p,ObjetGraphiqueMobile&e ) const{
                 if(i == l && c==j && p.getType() == 4){
                     p.afficher();
                     }
-                if(i == l1 && c1==j && e.getType() == 5){
+                else if(i == l1 && c1==j && e.getType() == 5){
                     e.afficher();
                     }
                 else{

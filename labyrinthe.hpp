@@ -23,13 +23,9 @@ class Labyrinthe{
     public :
 
         // constructeur :
-        Labyrinthe(int l,int c);
-        Labyrinthe(const labyrinthe&l);
         Labyrinthe(int l, int c); //Constructeur paramétré
         //~Labyrinthe(); //Destructeur
-
-        Labyrinthe(int l, int c);
-        Labyrinthe(const labyrinthe&l);
+        Labyrinthe(const Labyrinthe&l);
         Labyrinthe(); //Constructeur pour lire fichiers
         ~Labyrinthe(); //Destructeur
 
@@ -42,7 +38,7 @@ class Labyrinthe{
         //Ennemi :
 		void deplacerEnnemi();
 
-        bool fini() const;
+        int fini() const;
         bool fini2() const;
         bool EstDansPlateau(int i, int j) const;
 };

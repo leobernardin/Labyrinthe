@@ -18,7 +18,7 @@ int main(){
 
     char reponse;
 
-    while (l.fini() == 0 && l.fini2() == 0){
+    while (l.fini() == 0){
 
         cout << "Quelle action voulez-vous faire ? (d : droite, g : gauche, h : haut, b : bas)" << endl;
         cin >> reponse;
@@ -102,7 +102,7 @@ int main(){
 		cout << "La partie est finie. Vous avez atteint la sortie." << endl;
 
 	}
-	else if(l.fini2() == 1){
+	else if(l.fini() == 2){
 		cout << "Vous avez Perdu. L'ennemi vous a trouve " << endl;
 
 	}

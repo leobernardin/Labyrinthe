@@ -27,23 +27,23 @@ Labyrinthe :: Labyrinthe(){ // va nous servir pour lire les fichiers
 }
 
 // Constructeur de recopie a faire
-Labyrinthe(const labyrinthe&l){
-	l.m_nbc = m_nbc;
-    l.m_nbl = m_nbl;
-    l.m_plateau = m_plateau;
+Labyrinthe :: Labyrinthe(const Labyrinthe&l){
+	m_nbc = l.m_nbc ;
+    m_nbl = l.m_nbl;
+    m_plateau = l.m_plateau;
     
-    int Per_i = m_personnage->getI();
-    int Per_j = m_personnage->getJ();
+    int Per_i = l.m_personnage->getI();
+    int Per_j = l.m_personnage->getJ();
     
-    int Sortie_i = m_Sortie->getI();
-    int Sortie_j = m_Sortie->getJ();
+    int Sortie_i = l.m_sortie->getI();
+    int Sortie_j = l.m_sortie->getJ();
     
-	int Ennemi_i = m_ennemi->getI();
-    int Ennemi_j = m_ennemi->getJ();
+	int Ennemi_i = l.m_ennemi->getI();
+    int Ennemi_j = l.m_ennemi->getJ();
     
-    l.m_personnage = new Personnage(Per_i, Per_j);
-    l.m_Sortie = new Sortie(Sortie_i, Sortie_j);
-    l.m_ennemi = new Ennemi(Ennemi_i, Ennemi_j);
+    m_personnage = new Personnage(Per_i, Per_j);
+    m_sortie = new Sortie(Sortie_i, Sortie_j);
+    m_ennemi = new Ennemi(Ennemi_i, Ennemi_j);
     
 }
 
@@ -180,6 +180,7 @@ void Labyrinthe :: deplacerEnnemi(){
 
 }
 
+// renvoie 1 si perso arrive a Sortie. Sinon renvoie 2 si l'ennemi le rattrape.
 
 int Labyrinthe :: fini() const{
 
