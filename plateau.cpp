@@ -76,7 +76,6 @@ Plateau :: Plateau(const Plateau& p){
     for (int i =0; i<m_nbl; i++){
         p.m_plateau[i] = new ObjetGraphiqueFixe*[m_nbc];
     }
-    
     for(int i = 0; i<m_nbl; i++){
         for(int j=0; j<m_nbc; j++){
         	p.m_plateau[i][j] = m_plateau[i][j];
