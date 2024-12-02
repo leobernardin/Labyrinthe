@@ -31,7 +31,6 @@ int main(){
             }catch (ExceptionMouvement& ex){
 					cerr << ex.message << endl;
 				}
-                l.afficher();
                 //deplacement ennemi :
             try{
                 l.deplacerEnnemi();
@@ -39,7 +38,7 @@ int main(){
 					cerr << ex.message << endl;
 				}
 				cout<<"Apres deplacement Ennemi : \n";
-                l.afficher();
+				l.afficher();
                 break;
 
             case 'g' :
@@ -48,7 +47,6 @@ int main(){
             }catch (ExceptionMouvement& ex){
 					cerr << ex.message << endl;
 				}
-                l.afficher();
                 //deplacement ennemi :
             try{
                 l.deplacerEnnemi();
@@ -65,7 +63,6 @@ int main(){
             }catch (ExceptionMouvement& ex){
 				cerr << ex.message << endl;
 			}
-                l.afficher();
                                 //deplacement ennemi :
             try{
                 l.deplacerEnnemi();
@@ -82,7 +79,6 @@ int main(){
             }catch (ExceptionMouvement& ex){
 					cerr << ex.message << endl;
 				}
-                l.afficher();
             	                //deplacement ennemi :
             try{
                 l.deplacerEnnemi();
