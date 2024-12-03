@@ -3,6 +3,7 @@
 #include <cstdlib> // pour random
 #include "sortie.hpp" // peut etre a enlever
 
+////vklrkfkdlfkdlkklffdkl
 
 
 Labyrinthe :: Labyrinthe(int l, int c){
