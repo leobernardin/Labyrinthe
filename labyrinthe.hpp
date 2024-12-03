@@ -23,8 +23,9 @@ class Labyrinthe{
     public :
 
         // constructeur :
-        Labyrinthe(int l, int c);
-        //Labyrinthe(const labyrinthe&l);
+        Labyrinthe(int l, int c); //Constructeur paramétré
+        //~Labyrinthe(); //Destructeur
+        Labyrinthe(const Labyrinthe&l);
         Labyrinthe(); //Constructeur pour lire fichiers
         ~Labyrinthe(); //Destructeur
 
@@ -38,17 +39,14 @@ class Labyrinthe{
 		void deplacerEnnemi();
 
         int fini() const;
+        bool fini2() const;
         bool EstDansPlateau(int i, int j) const;
-
-        //surcharge de l'operateur "==" a corriger dans cpp
-        //bool operator==(const Labyrinthe& other) const;
-
 };
 
 class ExceptionMouvement{
-    public:
-        string message;
-        ExceptionMouvement(string m =""){message=m;}
+ public:
+ string message;
+ ExceptionMouvement(string m =""){message=m;}
 };
 
 

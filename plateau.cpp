@@ -43,30 +43,58 @@ Plateau :: Plateau(int l, int c){
                 }
         }
     }
+
     setCase(m_nbl-1,7, new Sortie(m_nbl-1,7));
-
 }
 
-// Constructeur par défaut a creer
-/*Plateau(){
+// Constructeur par défaut
 
+
+Plateau::Plateau(){
+	m_nbl = 2;
+    m_nbc = 2;
+    m_plateau = new ObjetGraphiqueFixe**[m_nbl];
+    
+    for (int i =0; i<m_nbl; i++){
+        m_plateau[i] = new ObjetGraphiqueFixe*[m_nbc];
+    }
+    for(int i = 0; i<m_nbl; i++){
+        for(int j=0; j<m_nbc; j++){
+        	setCase(i,j,new Mur(i,j));
+    	}
+	}
 }
-*/
+
 
 
 // Constructeur de copie a creer
-/*Plateau(const Plateau& p){
-
-
+Plateau :: Plateau(const Plateau& p){
+	m_nbl = p.m_nbl;
+	m_nbc = p.m_nbc;
+    m_plateau = new ObjetGraphiqueFixe**[m_nbl];
+    
+    for (int i =0; i<m_nbl; i++){
+        m_plateau[i] = new ObjetGraphiqueFixe*[m_nbc];
+    }
+    for(int i = 0; i<m_nbl; i++){
+        for(int j=0; j<m_nbc; j++){
+        	m_plateau[i][j] = p.m_plateau[i][j];
+    	}
+	}
 }
-*/
+
 
 
 // Destructeur a creer
-/*~Plateau(){
+Plateau :: ~Plateau(){
+	for(int i = 0; i<m_nbl; i++){
+		delete[] m_plateau[i];
+	}
+	delete[] m_plateau;
 
 }
-*/
+
+
 
 void Plateau :: setCase(int i, int j, ObjetGraphiqueFixe* o){
     m_plateau[i][j] = o;
@@ -81,7 +109,7 @@ ObjetGraphiqueFixe* Plateau :: getCase(int i, int j) const{
 }
 
 
-void Plateau :: afficher(ObjetGraphiqueMobile&p,ObjetGraphiqueMobile&e) const{
+void Plateau :: afficher(ObjetGraphiqueMobile&p,ObjetGraphiqueMobile&e ) const{
 
     int l = p.getI();
     int c = p.getJ();
@@ -89,11 +117,12 @@ void Plateau :: afficher(ObjetGraphiqueMobile&p,ObjetGraphiqueMobile&e) const{
     int c1 = e.getJ();
         for(int i = 0; i<m_nbl; i++){
             for(int j=0; j<m_nbc; j++){
-                if(i == l && c==j && p.getType() == 4){
-                    p.afficher();
-                    }
-                else if (i == l1 && c1==j && e.getType() == 5){
+            	
+            	if(i == l1 && c1==j && e.getType() == 5){
                     e.afficher();
+                    }
+                else if(i == l && c==j && p.getType() == 4){
+                    p.afficher();
                     }
                 else{
                     getCase(i,j)->afficher();
@@ -113,21 +142,3 @@ void Plateau :: afficher() const{
     }
 
 }
-
-
-bool Plateau::operator==(const Plateau& other) const {
-
-    if (m_nbl == other.m_nbl && m_nbc == other.m_nbc){
-        for(int i = 0; i<m_nbl; i++){
-                for(int j = 0; j<m_nbc; j++){
-                    if (getCase(i,j) != other.getCase(i,j)){
-                        return false;
-                    }
-
-                }
-        }
-        return true;
-    }
-    return false;
-}
-
