@@ -3,6 +3,7 @@
 #include <cstdlib> // pour random
 #include "sortie.hpp" // peut etre a enlever
 
+//joseph akuete
 
 
 Labyrinthe :: Labyrinthe(int l, int c){
@@ -123,7 +124,7 @@ void Labyrinthe :: deplacerEnnemi(){
 
         random = rand() %4;
 
-        if(random == 0){ // Mouvement à droite
+        if(random == 0){ // Mouvement ï¿½ droite
             int type = m_plateau->getCase(m_ennemi->m_i,m_ennemi->m_j +1)->getType();
 
             if(EstDansPlateau(m_ennemi->m_i,m_ennemi->m_j -1) && (type == 2 || type == 4)) {
